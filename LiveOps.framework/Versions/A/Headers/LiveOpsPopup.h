@@ -11,6 +11,7 @@
 
 typedef void (^LiveOpsPopupCompleteCallback)();
 typedef void (^LiveOpsPopupLinkCallback)(NSString* popupSpaceKey, NSDictionary* customData);
+typedef void (^LiveOpsPopupCloseCallback)(NSString* popupSpaceKey, NSString* popupCampaignName, NSDictionary* customData, NSUInteger remainPopupNum);
 
 
 @interface LiveOpsPopup : NSObject
@@ -22,5 +23,6 @@ typedef void (^LiveOpsPopupLinkCallback)(NSString* popupSpaceKey, NSDictionary* 
 + (void)destroyAllPopups;
 
 + (void)setPopupLinkListener:(LiveOpsPopupLinkCallback)block;
++ (void)setPopupCloseListener:(LiveOpsPopupCloseCallback)block;
 
 @end
