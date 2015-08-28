@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "LiveOps"
-s.version      = "1.0"
+s.version      = "1.0.1"
 s.summary      = "LiveOps.framework"
 s.homepage     = "https://github.com/IGAWorksDev/LiveOps-iOS"
 
