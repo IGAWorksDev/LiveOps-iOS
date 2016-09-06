@@ -32,6 +32,7 @@ typedef void (^LiveOpsRemotePushEnableCallback)(BOOL result);
 
 + (void)initPush;
 + (void)setDeviceToken:(NSData*)deviceToken;
++ (void)setDeviceTokenForANE:(NSString*)deviceToken;
 
 + (void)handleAllNotificationFromLaunch:(NSDictionary*)launchOptions;
 + (void)handleLocalNotification:(UILocalNotification *)notification;
