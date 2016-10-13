@@ -27,7 +27,6 @@ typedef void (^LiveOpsRemoteNotificationCallback)(NSArray* pushInfos, BOOL isFor
 typedef void (^LiveOpsRemotePushEnableCallback)(BOOL result);
 
 
-
 @interface LiveOpsPush : NSObject
 
 + (void)initPush;
