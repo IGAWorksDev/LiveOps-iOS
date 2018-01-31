@@ -21,6 +21,7 @@ typedef void (^LiveOpsPopupCloseCallback)(NSString* popupSpaceKey, NSString* pop
 + (void)showPopups:(NSString*)popupSpaceKey withViewController:(UIViewController*)viewCtrler;
 + (void)destroyPopup;
 + (void)destroyAllPopups;
++ (NSInteger)getPopupsInfo:(NSString*)popupSpaceKey;
 
 + (void)setPopupLinkListener:(LiveOpsPopupLinkCallback)block;
 + (void)setPopupCloseListener:(LiveOpsPopupCloseCallback)block;
