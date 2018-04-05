@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
+#define XC8_AVAILABLE 1
+#import <UserNotifications/UserNotifications.h>
+#endif
 
 
 @interface LiveOpsPushInfo : NSObject
@@ -46,5 +50,9 @@ typedef void (^LiveOpsRemotePushEnableCallback)(BOOL result);
 
 + (void)registerLocalPushNotification:(NSInteger)Id date:(NSDate*)date body:(NSString*)bodyText button:(NSString*)buttonText soundName:(NSString*)sound badgeNumber:(NSInteger)badgeNum customPayload:(NSDictionary*)payloadDict;
 + (void)cancelLocalPush:(NSInteger)Id;
+#if XC8_AVAILABLE
++ (void) handleUserNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response;
++ (void) handleUserNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification willShowSystemForegroundAlert:(BOOL)showAlertForegroundOption;
+#endif
 
 @end
