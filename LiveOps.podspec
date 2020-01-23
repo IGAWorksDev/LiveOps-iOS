@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
 s.name         = "LiveOps"
-s.version      = "2.2.1"
+s.version      = "2.2.2"
 s.summary      = "LiveOps.framework"
 s.homepage     = "https://github.com/IGAWorksDev/LiveOps-iOS"
 
 s.license      = {
 :type => 'Commercial',
 :text => <<-LICENSE
-All text and design is copyright 2006-2015 igaworks, Inc.
+All text and design is copyright 2006-2020 igaworks, Inc.
 
 All rights reserved.
 
@@ -16,7 +16,7 @@ LICENSE
 }
 
 s.platform = :ios, '8.0'
-s.author       = { "wonje,song" => "wonje@igaworks.com" }
+s.author       = { "MikeHan" => "mike@igaworks.com" }
 s.source       = { :git => "https://github.com/IGAWorksDev/LiveOps-iOS.git", :tag => "#{s.version}" }
 s.resources = "LiveOps.bundle"
 s.ios.vendored_frameworks = 'LiveOps.framework'
